@@ -1,0 +1,282 @@
+/* Estilos generales */
+
+body {
+    font-size: 16px;
+
+
+    font-family: Arial, sans-serif;
+
+
+    margin: 0;
+
+
+    padding: 0;
+}
+
+a {
+
+
+    text-decoration: none;
+
+
+    color: black;
+}
+
+/* Estilos del encabezado */
+
+header {
+
+
+    display: flex;
+    justify-content: space-between;
+
+
+    align-items: center;
+
+
+    padding: 20px;
+
+
+    background-color: #f8f8f8;
+}
+
+.banner {
+    width: 100%;
+
+
+    max-width: 100%;
+
+
+    height: auto;
+}
+
+.navbar {
+    background-color: #1808f1;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar-menu {
+    display: none;
+    list-style: none;
+}
+
+.navbar-menu.active {
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 15px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.navbar-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navbar-toggle-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.navbar-toggle-icon:before,
+.navbar-toggle-icon:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggle-icon:before {
+    top: -6px;
+}
+
+.navbar-toggle-icon:after {
+    top: 6px;
+}
+
+
+/* Estilos de los productos */
+
+.container-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.info-producto {
+    padding: 15px;
+    text-align: center;
+}
+
+.info-producto h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-producto p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.info-producto button {
+    background-color: #e5f506;
+    color: black;
+
+
+    border: none;
+
+
+    padding: 8px 16px;
+    border-radius: 4px;
+
+
+    cursor: pointer;
+}
+
+.info-producto button:hover {
+
+
+    background-color: #073ef1;
+}
+
+/* Estilos de la sección "Reseña y Nosotros" */
+
+.content.about {
+
+
+    padding: 20px;
+}
+
+.content.about h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content.about p {
+
+
+    font-size: 16px;
+
+
+    margin-bottom: 10px;
+}
+
+/* Estilos de la sección de contacto */
+
+.content-price {
+    padding: 20px;
+
+
+    background-color: #f8f8f8;
+}
+
+.form-container {
+
+
+    max-width: 500px;
+
+
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group .form-content {
+    margin-bottom: 10px;
+}
+
+.form-group .form-content label {
+    display: block;
+    font-size: 14px;
+
+
+    margin-bottom: 5px;
+}
+
+.form-group .form-content input,
+.form-group .form-content textarea {
+
+
+    width: 100%;
+
+
+    padding: 8px;
+
+
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group .form-content input[type="submit"] {
+
+
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+
+
+    padding: 10px 20px;
+    border-radius: 4px;
+
+
+    cursor: pointer;
+}
+
+.form-group .form-content input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilos del pie de página */
+
+footer {
+
+
+    background-color: #f8f8f8;
+    padding: 20px;
+
+
+    text-align: center;
+}
+
+.derechos p {
+    font-size: 12px;
+
+}

@@ -1,0 +1,62 @@
+// menu hamurgesa
+
+
+// Obtener referencias a los elementos del DOM
+const cartItemsElement = document.getElementById('cart-items');
+const cartTotalElement = document.getElementById('cart-total');
+const clearCartButton = document.getElementById('clear-cart');
+const addToCartButtons = document.getElementsByClassName('add-to-cart');
+
+// Carrito de compras
+let cartItems = [];
+let cartTotal = 0;
+
+// Función para actualizar el carrito
+function updateCart() {
+  // Limpiar los elementos del carrito
+  cartItemsElement.innerHTML = '';
+
+  // Recorrer los elementos en el carrito y agregarlos al DOM
+  cartItems.forEach(item => {
+    const li = document.createElement('li');
+    li.innerText = `${item.name} - $${item.price}`;
+    cartItemsElement.appendChild(li);
+  });
+
+  // Actualizar el total del carrito
+  cartTotalElement.innerText = `$${cartTotal}`;
+}
+
+// Función para agregar un producto al carrito
+function addToCart(name, price) {
+  const item = {
+    name: name,
+    price: price
+  };
+
+  cartItems.push(item);
+  cartTotal += price;
+
+  updateCart();
+}
+
+// Función para vaciar el carrito
+function clearCart() {
+  cartItems = [];
+  cartTotal = 0;
+
+  updateCart();
+}
+
+// Agregar eventos a los botones de "Agregar al Carrito"
+Array.from(addToCartButtons).forEach(button => {
+  button.addEventListener('click', () => {
+    const price = parseInt(button.dataset.price);
+    const productName = button.previousElementSibling.innerText;
+
+    addToCart(productName, price);
+  });
+});
+
+// Agregar evento al botón de "Vaciar Carrito"
+clearCartButton.addEventListener('click', clearCart);
